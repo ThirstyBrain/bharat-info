@@ -24,7 +24,13 @@ jobs:
 
       - name: Build project
         run: npm run build
-        
+
+      - name: Print working directory
+        run: pwd
+
+      - name: List all files and directories
+        run: ls -R
+
       - name: List build directory contents
         run: ls -R ./bharat-info
 
