@@ -22,6 +22,7 @@ export default defineConfig({
       },
     }),
   ],
+  base:"/bharat-info/",
   resolve: {
     alias: [
       {
