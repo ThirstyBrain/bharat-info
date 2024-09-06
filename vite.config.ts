@@ -36,4 +36,15 @@ export default defineConfig({
   },
   server: { port: PORT, host: true },
   preview: { port: PORT, host: true },
+  build: {
+    outDir: 'build', // Specify the output directory
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000, // Adjust the chunk size limit if needed
+  },
 });
