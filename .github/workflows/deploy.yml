@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - ifsc-code
 
 jobs:
   build:
@@ -29,23 +29,23 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: production-files
-          path: ./dist
+          path: ./bharat-info
 
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/ifsc-code'
 
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
           name: production-files
-          path: ./dist
+          path: ./bharat-info
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./bharat-info
