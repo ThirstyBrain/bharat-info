@@ -60,6 +60,7 @@ export function Router() {
         </AuthLayout>
       ),
     },
+    { path: '/', element: <Ifsc /> },
     {
       path: '404',
       element: <Page404 />,
