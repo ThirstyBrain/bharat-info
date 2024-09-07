@@ -15,7 +15,7 @@ export const navData = [
   // },
   {
     title: 'IFSC Code',
-    path: '/',
+    path: '/ifsc',
     icon: icon('ic-user'),
   },
   // {

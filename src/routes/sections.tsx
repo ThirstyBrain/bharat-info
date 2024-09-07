@@ -7,6 +7,7 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 import { varAlpha } from 'src/theme/styles';
 import { AuthLayout } from 'src/layouts/auth';
 import { DashboardLayout } from 'src/layouts/dashboard';
+import Ifsc from 'src/sections/overview/ifsc_code/ifsc-code';
 
 // ----------------------------------------------------------------------
 
@@ -43,7 +44,9 @@ export function Router() {
         </DashboardLayout>
       ),
       children: [
+        // { element: <HomePage />, index: true },
         { element: <HomePage />, index: true },
+        { path: 'ifsc', element: <Ifsc /> },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
